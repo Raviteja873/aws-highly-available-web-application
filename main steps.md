@@ -26,57 +26,7 @@ A **Bastion Host** is used to securely connect to the private EC2 instances thro
 
 ### High-Level Architecture
 
-text
-                         INTERNET
-                            |
-                            | HTTP : 80
-                            v
-                 +-----------------------+
-                 | Application Load      |
-                 | Balancer              |
-                 | aws-project-lb        |
-                 | Internet-facing       |
-                 +-----------+-----------+
-                             |
-                             | HTTP : 8000
-                             v
-                    +----------------+
-                    | Target Group   |
-                    | aws-project    |
-                    +-------+--------+
-                            |
-              +-------------+-------------+
-              |                           |
-              v                           v
-     +-------------------+       +-------------------+
-     | Private EC2 #1    |       | Private EC2 #2    |
-     | ap-south-1a       |       | ap-south-1b       |
-     | 10.0.131.226      |       | 10.0.144.215      |
-     | Port 8000         |       | Port 8000         |
-     +-------------------+       +-------------------+
-              |                           |
-              v                           v
-        NAT Gateway 1               NAT Gateway 2
-              |                           |
-              +-------------+-------------+
-                            |
-                         INTERNET
 
-
-Administrator Laptop
-        |
-        | SSH : 22
-        v
-+----------------------+
-| Bastion Host         |
-| bastion-host-for-    |
-| project              |
-+----------+-----------+
-           |
-           | SSH : 22
-           +------------------> Private EC2 #1
-           |
-           +------------------> Private EC2 #2
 
 
 
