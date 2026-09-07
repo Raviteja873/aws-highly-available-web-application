@@ -26,7 +26,7 @@ A **Bastion Host** is used to securely connect to the private EC2 instances thro
 
 ### High-Level Architecture
 
-```text
+text
                          INTERNET
                             |
                             | HTTP : 80
@@ -205,7 +205,7 @@ VPC
 |                             |
 +-----------------------------+
 
-<img width="610" height="263" alt="Screenshot 2026-09-07 112933" src="https://github.com/user-attachments/assets/f50e11f4-599f-4a0e-9868-9b3d0277c0b6" />
+  <img width="610" height="263" alt="Screenshot 2026-09-07 112933" src="https://github.com/user-attachments/assets/f50e11f4-599f-4a0e-9868-9b3d0277c0b6" />
 
 
 
